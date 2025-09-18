@@ -955,7 +955,10 @@
                 <span class="dot"></span>
                 <span class="dot"></span>
               </div>
-              <form class="form" id="contactForm">
+              <form class="form" id="contactForm" action="contact.php" method="POST">
+                <!-- Config backend propio -->
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+                <input type="hidden" name="_next" value="index.html#contacto" />
                 <div class="step active" data-step="1">
                   <div class="field">
                     <label class="label" for="tipo">Tipo de proyecto</label>
@@ -1012,6 +1015,7 @@
                   </div>
                 </div>
               </form>
+              <div id="contactAlert" class="help" style="display:none"></div>
               <div class="help">También puedes escribir por WhatsApp: <a href="https://wa.me/51964107356" target="_blank" rel="noopener">+51 964 107 356</a></div>
             </div>
           </div>

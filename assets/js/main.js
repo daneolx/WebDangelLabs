@@ -17,6 +17,7 @@
 	// Contact form
 	const form = document.getElementById('contactForm');
 	const stepper = document.getElementById('stepper');
+	const contactAlert = document.getElementById('contactAlert');
 	if (form && stepper) {
 		const steps = Array.from(form.querySelectorAll('.step'));
 		let current = 0;
@@ -38,6 +39,11 @@
 			}
 		});
 		form.addEventListener('submit', (e) => {
+			// Si hay action (integración FormSubmit u otro backend), permitir envío real
+			if (form.getAttribute('action')) {
+				return; // dejar que el navegador envíe el formulario
+			}
+			// Modo demo (sin action): prevenir y mostrar alerta
 			e.preventDefault();
 			const data = new FormData(form);
 			console.log('Contacto:', Object.fromEntries(data.entries()));
@@ -47,6 +53,27 @@
 			update();
 		});
 		update();
+	}
+
+	// Mostrar mensajes según query param contact_status
+	if (contactAlert) {
+		const params = new URLSearchParams(window.location.search);
+		const status = params.get('contact_status');
+		if (status === 'ok') {
+			contactAlert.textContent = 'Mensaje enviado correctamente. ¡Gracias!';
+			contactAlert.style.color = '#0a7d32';
+			contactAlert.style.display = 'block';
+			setTimeout(() => { contactAlert.style.display = 'none'; }, 6000);
+			params.delete('contact_status');
+			history.replaceState(null, '', window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash);
+		} else if (status === 'error') {
+			contactAlert.textContent = 'No se pudo enviar el mensaje. Inténtalo nuevamente.';
+			contactAlert.style.color = '#a10f0f';
+			contactAlert.style.display = 'block';
+			setTimeout(() => { contactAlert.style.display = 'none'; }, 8000);
+			params.delete('contact_status');
+			history.replaceState(null, '', window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash);
+		}
 	}
 
 	// Portfolio slider
