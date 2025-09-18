@@ -60,20 +60,48 @@
 		const params = new URLSearchParams(window.location.search);
 		const status = params.get('contact_status');
 		if (status === 'ok') {
-			contactAlert.textContent = 'Mensaje enviado correctamente. ¡Gracias!';
-			contactAlert.style.color = '#0a7d32';
-			contactAlert.style.display = 'block';
-			setTimeout(() => { contactAlert.style.display = 'none'; }, 6000);
-			params.delete('contact_status');
-			history.replaceState(null, '', window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash);
+			showContactAlert('success', '¡Mensaje enviado correctamente!', 'Te contactaremos pronto. Gracias por confiar en nosotros.');
 		} else if (status === 'error') {
-			contactAlert.textContent = 'No se pudo enviar el mensaje. Inténtalo nuevamente.';
-			contactAlert.style.color = '#a10f0f';
-			contactAlert.style.display = 'block';
-			setTimeout(() => { contactAlert.style.display = 'none'; }, 8000);
-			params.delete('contact_status');
-			history.replaceState(null, '', window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash);
+			showContactAlert('error', 'Error al enviar el mensaje', 'Por favor, inténtalo de nuevo o contáctanos por WhatsApp.');
 		}
+	}
+	
+	// Función para mostrar alertas de contacto profesionales
+	function showContactAlert(type, title, message) {
+		const alert = document.getElementById('contactAlert');
+		if (!alert) return;
+		
+		// Configurar clase y contenido
+		alert.className = `contact-alert ${type}`;
+		alert.querySelector('.contact-alert__title').textContent = title;
+		alert.querySelector('.contact-alert__message').textContent = message;
+		
+		// Mostrar icono correspondiente
+		const successIcon = alert.querySelector('.success-icon');
+		const errorIcon = alert.querySelector('.error-icon');
+		if (type === 'success') {
+			successIcon.style.display = 'block';
+			errorIcon.style.display = 'none';
+		} else {
+			successIcon.style.display = 'none';
+			errorIcon.style.display = 'block';
+		}
+		
+		// Mostrar alerta con animación
+		alert.style.display = 'block';
+		setTimeout(() => alert.classList.add('show'), 100);
+		
+		// Auto-ocultar después de 6 segundos
+		setTimeout(() => {
+			alert.classList.remove('show');
+			setTimeout(() => {
+				alert.style.display = 'none';
+				// Limpiar URL
+				const url = new URL(window.location);
+				url.searchParams.delete('contact_status');
+				window.history.replaceState({}, '', url);
+			}, 400);
+		}, 6000);
 	}
 
 	// Portfolio slider
@@ -84,8 +112,8 @@
 	
 	if (slider && prevBtn && nextBtn && dotsContainer) {
 		const items = Array.from(slider.querySelectorAll('.slider-item'));
-		const itemsPerView = window.innerWidth >= 768 ? 3 : 1;
-		const totalSlides = Math.ceil(items.length / itemsPerView);
+		let itemsPerView = window.innerWidth >= 768 ? 3 : 1;
+		let totalSlides = Math.ceil(items.length / itemsPerView);
 		let currentSlide = 0;
 		let autoplayInterval;
 
@@ -103,8 +131,12 @@
 
 		// Update slider position
 		function updateSlider() {
-			const translateX = -currentSlide * (100 / itemsPerView);
-			slider.style.transform = `translateX(${translateX}%)`;
+			const styles = getComputedStyle(slider);
+			const gapPx = parseFloat(styles.gap) || 0;
+			const itemWidth = items[0] ? items[0].getBoundingClientRect().width : 0;
+			const pageWidth = itemWidth * itemsPerView + gapPx * (itemsPerView - 1);
+			const translateX = -currentSlide * pageWidth;
+			slider.style.transform = `translateX(${translateX}px)`;
 			
 			// Update dots
 			const dots = Array.from(dotsContainer.querySelectorAll('.slider-dot'));
@@ -216,8 +248,14 @@
 		window.addEventListener('resize', () => {
 			const newItemsPerView = window.innerWidth >= 768 ? 3 : 1;
 			if (newItemsPerView !== itemsPerView) {
-				location.reload(); // Simple solution for demo
+				itemsPerView = newItemsPerView;
+				totalSlides = Math.ceil(items.length / itemsPerView);
+				if (currentSlide > totalSlides - 1) currentSlide = Math.max(0, totalSlides - 1);
+				createDots();
+				updateSlider();
 			}
+			// Recalcular posición aunque no cambie itemsPerView (por cambios de ancho)
+			updateSlider();
 		});
 	}
 

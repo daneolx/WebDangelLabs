@@ -1015,7 +1015,33 @@
                   </div>
                 </div>
               </form>
-              <div id="contactAlert" class="help" style="display:none"></div>
+              <!-- Contact Alert -->
+              <div id="contactAlert" class="contact-alert" style="display: none;">
+                <div class="contact-alert__icon">
+                  <svg class="success-icon" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+                  </svg>
+                  <svg class="error-icon" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                  </svg>
+                </div>
+                <div class="contact-alert__content">
+                  <div class="contact-alert__title"></div>
+                  <div class="contact-alert__message"></div>
+                </div>
+                <button class="contact-alert__close" onclick="this.parentElement.style.display='none'">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+                <div class="contact-alert__progress">
+                  <div class="contact-alert__progress-bar"></div>
+                </div>
+              </div>
               <div class="help">También puedes escribir por WhatsApp: <a href="https://wa.me/51964107356" target="_blank" rel="noopener">+51 964 107 356</a></div>
             </div>
           </div>
