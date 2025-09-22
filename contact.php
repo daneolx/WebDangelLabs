@@ -16,7 +16,12 @@ $honeypot = isset($_POST['_honey']) ? trim((string)$_POST['_honey']) : '';
 if ($honeypot !== '') {
     // Fingir éxito para bots
     $next = isset($_POST['_next']) ? $_POST['_next'] : 'index.html#contacto';
-    header('Location: ' . $next . (strpos($next, '?') === false ? '?' : '&') . 'contact_status=ok');
+    // Insertar query antes del hash (#)
+    $parts = explode('#', $next, 2);
+    $base = $parts[0];
+    $hash = isset($parts[1]) ? '#' . $parts[1] : '';
+    $sep = (strpos($base, '?') === false) ? '?' : '&';
+    header('Location: ' . $base . $sep . 'contact_status=ok' . $hash);
     exit;
 }
 
@@ -42,7 +47,12 @@ if (!empty($errors)) {
         'contact_status' => 'error',
         'fields' => implode(',', $errors)
     ]);
-    header('Location: ' . $next . (strpos($next, '?') === false ? '?' : '&') . $qs);
+    // Insertar query antes del hash (#)
+    $parts = explode('#', $next, 2);
+    $base = $parts[0];
+    $hash = isset($parts[1]) ? '#' . $parts[1] : '';
+    $sep = (strpos($base, '?') === false) ? '?' : '&';
+    header('Location: ' . $base . $sep . $qs . $hash);
     exit;
 }
 
@@ -87,7 +97,12 @@ if ($sent) {
     $qs = http_build_query(['contact_status' => 'error', 'reason' => 'send_failed']);
 }
 
-header('Location: ' . $next . (strpos($next, '?') === false ? '?' : '&') . $qs);
+// Insertar query antes del hash (#)
+$parts = explode('#', $next, 2);
+$base = $parts[0];
+$hash = isset($parts[1]) ? '#' . $parts[1] : '';
+$sep = (strpos($base, '?') === false) ? '?' : '&';
+header('Location: ' . $base . $sep . $qs . $hash);
 exit;
 
 

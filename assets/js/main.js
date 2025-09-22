@@ -47,7 +47,12 @@
 			e.preventDefault();
 			const data = new FormData(form);
 			console.log('Contacto:', Object.fromEntries(data.entries()));
-			alert('¡Gracias! Te contactaremos pronto.');
+			// Mostrar alerta profesional de éxito
+			showContactAlert(
+				'success',
+				'¡Mensaje enviado correctamente!',
+				'Te contactaremos pronto. También puedes escribirnos por WhatsApp si lo prefieres.'
+			);
 			form.reset();
 			current = 0;
 			update();
@@ -55,7 +60,7 @@
 		update();
 	}
 
-	// Mostrar mensajes según query param contact_status
+	// Mostrar mensajes según query param contact_status (y asegurar ancla #contacto)
 	if (contactAlert) {
 		const params = new URLSearchParams(window.location.search);
 		const status = params.get('contact_status');
@@ -63,6 +68,11 @@
 			showContactAlert('success', '¡Mensaje enviado correctamente!', 'Te contactaremos pronto. Gracias por confiar en nosotros.');
 		} else if (status === 'error') {
 			showContactAlert('error', 'Error al enviar el mensaje', 'Por favor, inténtalo de nuevo o contáctanos por WhatsApp.');
+		}
+
+		// Forzar mantener #contacto en la URL si no está
+		if (status && !window.location.hash) {
+			window.location.hash = '#contacto';
 		}
 	}
 	
@@ -87,16 +97,16 @@
 			errorIcon.style.display = 'block';
 		}
 		
-		// Mostrar alerta con animación
+		// Mostrar alerta (soporta variante fija o inline)
 		alert.style.display = 'block';
-		setTimeout(() => alert.classList.add('show'), 100);
+		setTimeout(() => alert.classList.add('show'), 50);
 		
 		// Auto-ocultar después de 6 segundos
 		setTimeout(() => {
 			alert.classList.remove('show');
 			setTimeout(() => {
 				alert.style.display = 'none';
-				// Limpiar URL
+				// Limpiar URL (conservando el hash #contacto si existe)
 				const url = new URL(window.location);
 				url.searchParams.delete('contact_status');
 				window.history.replaceState({}, '', url);
