@@ -30,6 +30,7 @@ $tipo = isset($_POST['tipo']) ? trim((string)$_POST['tipo']) : '';
 $presupuesto = isset($_POST['presupuesto']) ? trim((string)$_POST['presupuesto']) : '';
 $nombre = isset($_POST['nombre']) ? trim((string)$_POST['nombre']) : '';
 $email = isset($_POST['email']) ? trim((string)$_POST['email']) : '';
+$telefono = isset($_POST['telefono']) ? trim((string)$_POST['telefono']) : '';
 $empresa = isset($_POST['empresa']) ? trim((string)$_POST['empresa']) : '';
 $mensaje = isset($_POST['mensaje']) ? trim((string)$_POST['mensaje']) : '';
 $next = isset($_POST['_next']) ? (string)$_POST['_next'] : 'index.html#contacto';
@@ -40,6 +41,7 @@ if ($tipo === '') $errors[] = 'tipo';
 if ($presupuesto === '') $errors[] = 'presupuesto';
 if ($nombre === '') $errors[] = 'nombre';
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'email';
+if ($telefono === '') $errors[] = 'telefono';
 if ($mensaje === '') $errors[] = 'mensaje';
 
 if (!empty($errors)) {
@@ -70,6 +72,7 @@ $lines = [
     'Presupuesto: ' . $presupuesto,
     'Nombre: ' . $nombre,
     'Email: ' . $email,
+    'Teléfono: ' . $telefono,
     'Empresa: ' . ($empresa !== '' ? $empresa : '-'),
     'Mensaje:',
     $mensaje,
