@@ -1199,12 +1199,30 @@ header.site-header {
 }
 
 /* Pricing section styles */
+.price-wrapper {
+  position: relative;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.price-label {
+  display: inline-block;
+  background: var(--color-primary);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .price {
   font-size: 32px;
   font-weight: 800;
   color: var(--color-primary);
-  margin: 16px 0;
-  text-align: center;
+  margin: 0;
 }
 
 .tech-badge {
