@@ -95,6 +95,12 @@
               "@type": "Service",
               "name": "Software empresarial",
               "serviceType": "BusinessSoftware"
+            },
+            {
+              "@type": "Service",
+              "name": "GestiMype - Sistema de gestión comercial",
+              "serviceType": "BusinessSoftware",
+              "description": "Sistema de gestión comercial para empresas peruanas: facturación electrónica SUNAT, clientes, productos, inventario y reportes. GestiMype. Planes desde S/90/mes."
             }
           ],
           "openingHoursSpecification": [{
@@ -119,22 +125,53 @@
           <span class="brand__logo"><img class="brand__logo-img" src="assets/img/logo/logod.png" alt="Dangel Labs"></span>
         </a>
         <nav class="nav" aria-label="Principal">
-          <a href="servicios.html">Servicios</a>
-          <a href="#portafolio">Portafolio</a>
-          <a href="#precios">Precios</a>
+          <div class="nav__item">
+            <a href="servicios.html" class="nav__link">Servicios</a>
+            <div class="nav__dropdown" aria-hidden="true">
+              <div class="nav__dropdown-inner">
+                <a href="servicios.html#movil">Apps móviles</a>
+                <a href="servicios.html#web">Plataformas web</a>
+                <a href="servicios.html">Ecommerce</a>
+                <a href="servicios.html#consultoria">Consultoría</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav__item">
+            <a href="productos.html" class="nav__link">Productos</a>
+            <div class="nav__dropdown" aria-hidden="true">
+              <div class="nav__dropdown-inner">
+                <a href="productos.html#gestimype">GestiMype</a>
+                <a href="productos.html#pos">POS</a>
+                <a href="productos.html">Ver todos</a>
+              </div>
+            </div>
+          </div>
+          <a href="precios.html">Precios</a>
           <a href="nosotros.html">Nosotros</a>
-          <a href="#contacto">Contacto</a>
+          <a href="contacto.html">Contacto</a>
         </nav>
-        <a class="button cta" href="#contacto">Cotizar proyecto</a>
+        <a class="button" href="#">Zona clientes</a>
         <button class="burger" aria-label="Abrir menú" id="burger" type="button">☰</button>
       </div>
       <div class="container mobile-menu" id="mobileMenu">
-        <a href="servicios.html">Servicios</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="#precios">Precios</a>
+        <div class="mobile-menu__group">
+          <span class="mobile-menu__label">Servicios</span>
+          <a href="servicios.html">Ver servicios</a>
+          <a href="servicios.html#movil">Apps móviles</a>
+          <a href="servicios.html#web">Plataformas web</a>
+          <a href="servicios.html">Ecommerce</a>
+          <a href="servicios.html#consultoria">Consultoría</a>
+        </div>
+        <div class="mobile-menu__group">
+          <span class="mobile-menu__label">Productos</span>
+          <a href="productos.html">Ver productos</a>
+          <a href="productos.html#gestimype">GestiMype</a>
+          <a href="productos.html#pos">POS</a>
+        </div>
+        <a href="precios.html">Precios</a>
         <a href="nosotros.html">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-        <a class="button" href="#contacto">Cotizar proyecto</a>
+        <a href="contacto.html">Contacto</a>
+        <a class="button" href="#">Zona clientes</a>
       </div>
     </header>
 
@@ -147,7 +184,7 @@
             <p>Nos encargamos de todo: descubrimiento, diseño, desarrollo y evolución constante, con el objetivo de que tu proyecto genere valor y crecimiento real.</p>
             <div class="hero__cta">
               <a class="button" href="#contacto">Cotizar mi proyecto</a>
-              <a class="button button--ghost" href="#portafolio">Ver portafolio</a>
+              <a class="button button--ghost" href="servicios.html#portafolio">Ver portafolio</a>
             </div>
 
             <div class="hero__card">
@@ -281,9 +318,9 @@
           <div class="section__head">
             <div class="section__kicker">Servicios</div>
             <h2 class="section__title">Desarrollo de Apps móviles, Web a medida y Consultoría</h2>
-            <p class="section__desc">Soluciones end‑to‑end: iOS/Android nativo o Flutter/React Native, aplicaciones web modernas y software a medida con integraciones empresariales.</p>
+            <p class="section__desc">Soluciones end‑to‑end: iOS/Android nativo o Flutter/React Native, aplicaciones web modernas, software a medida y nuestro sistema de gestión comercial GestiMype.</p>
           </div>
-          <div class="grid cards-3">
+          <div class="grid cards-4">
             <article class="card">
               <div class="card__icon">
                 <svg class="icon-mobile" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -333,6 +370,116 @@
               <p>Te ayudamos a darle forma a tu idea: planificamos el camino, calculamos tiempos y costos, auditamos tu código y te preparamos para crecer en la nube.</p>
               <span class="chip">Arquitectura • DevOps • UX Research</span>
             </article>
+            <article class="card card--productos">
+              <div class="card__icon">
+                <svg class="icon-gestipyme" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 7L12 3L4 7V17L12 21L20 17V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 21V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 7L12 11L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Productos</h3>
+              <p>Soluciones listas para tu negocio: GestiMype y más. Sistemas de gestión, facturación SUNAT y soporte local.</p>
+              <span class="chip">GestiMype • Próximamente más</span>
+              <div class="card__features">
+                <div class="feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Software listo</span>
+                </div>
+                <div class="feature-item">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span>Precios claros</span>
+                </div>
+              </div>
+              <a class="button button--small" href="productos.html">Ver productos</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Productos Dangel Labs -->
+      <section class="section section--productos" id="productos">
+        <div class="container">
+          <div class="section__head">
+            <div class="section__kicker">Productos Dangel Labs</div>
+            <h2 class="section__title">Soluciones listas para tu negocio</h2>
+            <p class="section__desc">Software probado, soporte local y precios claros. Nuestros productos están pensados para empresas que quieren crecer con tecnología confiable.</p>
+          </div>
+          <div class="grid product-grid">
+            <article class="card product-card">
+              <div class="product-card__visual">
+                <div class="card__icon product-card__icon">
+                  <svg class="icon-gestipyme" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="product-card__tag">Gestión comercial</span>
+              </div>
+              <h3>GestiMype</h3>
+              <p>Sistema de gestión comercial para empresas peruanas: facturación SUNAT, clientes, productos, inventario y reportes. Planes desde S/90/mes.</p>
+              <span class="chip">Facturación SUNAT • Inventario • Reportes</span>
+              <a class="button" href="productos.html#gestimype">Conocer GestiMype</a>
+            </article>
+            <article class="card product-card">
+              <div class="product-card__visual">
+                <div class="card__icon product-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3v18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 7h4v4H7V7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 7h4v2h-4V7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13 11h4v2h-4v-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 13h4v4H7v-4z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="product-card__tag">Punto de venta</span>
+              </div>
+              <h3>POS con inventario</h3>
+              <p>Punto de venta con control de inventario: caja digital, boletas electrónicas, stock automático. Ideal para bodegas, tiendas, farmacias y minimarkets.</p>
+              <span class="chip">Boletas electrónicas • Código de barras • Modo offline</span>
+              <a class="button" href="productos.html#pos">Conocer más</a>
+            </article>
+            <article class="card product-card">
+              <div class="product-card__visual">
+                <div class="card__icon product-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 8v4l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="product-card__tag">RR. HH.</span>
+              </div>
+              <h3>Planillas y asistencia</h3>
+              <p>Sistema de control de planillas y asistencia: registro de horas, sueldos, reportes SUNAT y AFP. Para restaurantes, talleres y tiendas con personal fijo.</p>
+              <span class="chip">Asistencia • Planillas • SUNAT / AFP</span>
+              <a class="button" href="productos.html#planillas">Conocer más</a>
+            </article>
+            <article class="card product-card">
+              <div class="product-card__visual">
+                <div class="card__icon product-card__icon">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.27 6.96L12 12.01l8.73-5.05" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="product-card__tag">E-commerce</span>
+              </div>
+              <h3>E-commerce integrado</h3>
+              <p>Tienda online conectada a inventario y facturación. Catálogo, stock y facturación electrónica en un solo flujo. Vende por web, WhatsApp o redes.</p>
+              <span class="chip">Catálogo • Stock • Facturación electrónica</span>
+              <a class="button" href="productos.html#ecommerce">Conocer más</a>
+            </article>
+          </div>
+          <div class="productos-cta">
+            <a class="button button--ghost" href="productos.html">Ver todos los productos</a>
           </div>
         </div>
       </section>
@@ -473,162 +620,6 @@
             <div class="slider-dots" id="sliderDots">
               <!-- Dots will be generated by JavaScript -->
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="precios">
-        <div class="container">
-          <div class="section__head">
-            <div class="section__kicker">Precios</div>
-            <h2 class="section__title">Resultados que cuentan</h2>
-            <p class="section__desc">Precios transparentes y sin sorpresas. Solo pagas por lo que necesitas.</p>
-          </div>
-          <div class="grid cards-4">
-            <article class="card">
-              <h3>Landing Page</h3>
-              <div class="price-wrapper">
-                <span class="price-label">Desde</span>
-                <div class="price">S/650</div>
-              </div>
-              <p>Página de aterrizaje optimizada para conversión con diseño moderno y responsive.</p>
-              <div class="tech-badge">HTML5 • CSS3 • JavaScript</div>
-              <ul>
-                <li>Diseño responsive</li>
-                <li>Formulario de contacto</li>
-                <li>Correo corporativo</li>
-                <li>Optimización SEO</li>
-                <li>Hosting y dominio 1 año gratis</li>
-              </ul>
-              <div class="hosting-info">
-                <span>Desde segundo año:</span>
-                <div class="hosting-item">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.27 6.96L12 12.01L20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Hosting: S/350/año</span>
-                </div>
-                <div class="hosting-item">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Dominio: S/100/año</span>
-                </div>
-              </div>
-              <br>
-              <a class="button" href="#contacto">Cotizar</a>
-            </article>
-            <article class="card">
-              <h3>Página Web</h3>
-              <div class="price-wrapper">
-                <span class="price-label">Desde</span>
-                <div class="price">S/950</div>
-              </div>
-              <p>Sitio web completo con múltiples páginas y funcionalidades avanzadas.</p>
-              <div class="tech-badge">HTML5 • CSS3 • JavaScript</div>
-              <ul>
-                <li>Hasta 06 páginas</li>
-                <li>Formulario de contacto</li>
-                <li>Correo corporativo</li>
-                <li>Galería de imágenes</li>
-                <li>Optimización SEO</li>
-                <li>Hosting y dominio 1 año gratis</li>
-              </ul>
-              <div class="hosting-info">
-                <span>Desde segundo año:</span>
-                <div class="hosting-item">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.27 6.96L12 12.01L20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Hosting: S/350/año</span>
-                </div>
-                <div class="hosting-item">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Dominio: S/100/año</span>
-                </div>
-              </div>
-              <br>
-              <a class="button" href="#contacto">Cotizar</a>
-            </article>
-            <article class="card">
-              <h3>Plataforma Web</h3>
-              <div class="price-wrapper">
-                <span class="price-label">Desde</span>
-                <div class="price">S/1,600</div>
-              </div>
-              <p>Aplicación web completa con backend, base de datos y funcionalidades complejas.</p>
-              <div class="tech-badge">Django • Node.js • React • PostgreSQL</div>
-              <ul>
-                <li>Ecommerce / Intranet / CRM</li>
-                <li>Panel de administración</li>
-                <li>Base de datos</li>
-                <li>Correo corporativo</li>
-                <li>Optimización SEO</li>
-                <li>Hosting y dominio 1 año gratis</li>
-              </ul>
-              <div class="hosting-info">
-                <span>Desde segundo año:</span>
-                <div class="hosting-item">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.27 6.96L12 12.01L20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Hosting VPS: S/480/año</span>
-                </div>
-                <div class="hosting-item">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Dominio: S/100/año</span>
-                </div>
-              </div>
-              <br>
-              <a class="button" href="#contacto">Cotizar</a>
-            </article>
-            <article class="card">
-              <h3>Aplicaciones Móviles</h3>
-              <div class="price">Consultar Precio</div>
-              <p>Aplicaciones nativas e híbridas para iOS y Android con funcionalidades avanzadas.</p>
-              <div class="tech-badge">React Native • Flutter • Swift • Kotlin</div>
-              <ul>
-                <li>Desarrollo multiplataforma</li>
-                <li>Integración con APIs</li>
-                <li>Notificaciones push</li>
-                <li>Geolocalización</li>
-                <li>Publicación en stores</li>
-              </ul>
-              <div class="hosting-info">
-                <div class="hosting-item">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 2H7C5.9 2 5 2.9 5 4V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V4C19 2.9 18.1 2 17 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 18H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>App Store: USD/99/año</span>
-                </div>
-                <div class="hosting-item">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 2H7C5.9 2 5 2.9 5 4V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V4C19 2.9 18.1 2 17 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 18H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                  <span>Google Play: USD/25</span>
-                </div>
-              </div>
-              <br>
-              <a class="button" href="#contacto">Cotizar</a>
-            </article>
           </div>
         </div>
       </section>
@@ -971,28 +962,30 @@
                 <span class="dot"></span>
               </div>
               <form class="form" id="contactForm" action="contact.php" method="POST">
-                <!-- Config backend propio -->
-                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
                 <input type="hidden" name="_next" value="index.html#contacto" />
+                <!-- Honeypots anti-bots (no rellenar; ocultos y sin tabindex) -->
+                <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <input type="text" name="website" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <!-- Tiempo mínimo en formulario (segundos desde carga); JS puede rellenarlo -->
+                <input type="hidden" name="_ts" id="contactFormTs" value="" />
+
                 <div class="step active" data-step="1">
                   <div class="field">
-                    <label class="label" for="tipo">Tipo de proyecto</label>
-                    <select id="tipo" name="tipo" class="select" required>
-                      <option value="">Selecciona…</option>
-                      <option>App móvil</option>
-                      <option>Aplicación Web</option>
-                      <option>Software a medida</option>
-                      <option>Consultoría</option>
-                    </select>
-                  </div>
-                  <div class="field">
-                    <label class="label" for="presupuesto">Presupuesto estimado</label>
-                    <select id="presupuesto" name="presupuesto" class="select" required>
-                      <option value="">Selecciona…</option>
-                      <option>S/900 – S/1,500</option>
-                      <option>S/1,500 - S/2,000</option>
-                      <option>S/2,000 - S/3,000</option>
-                      <option>S/3,500+</option>
+                    <label class="label" for="interes">¿Qué te interesa?</label>
+                    <select id="interes" name="interes" class="select" required>
+                      <option value="">Selecciona una opción…</option>
+                      <optgroup label="Producto">
+                        <option value="Producto - GestiMype (demo o planes)">GestiMype — Demo o planes</option>
+                        <option value="Producto - Otro">Otro producto</option>
+                      </optgroup>
+                      <optgroup label="Servicios">
+                        <option value="Servicios - App móvil">App móvil</option>
+                        <option value="Servicios - Aplicación web">Aplicación web</option>
+                        <option value="Servicios - Software a medida">Software a medida</option>
+                        <option value="Servicios - Página o landing">Página web o landing</option>
+                      </optgroup>
+                      <option value="Consultoría">Consultoría</option>
+                      <option value="Otro">Otro / General</option>
                     </select>
                   </div>
                   <div>
@@ -1002,20 +995,20 @@
 
                 <div class="step" data-step="2">
                   <div class="field">
-                    <label class="label" for="nombre">Nombre</label>
-                    <input id="nombre" name="nombre" class="input" placeholder="Tu nombre" required>
+                    <label class="label" for="nombre">Nombre completo</label>
+                    <input id="nombre" name="nombre" class="input" placeholder="Tu nombre" minlength="2" maxlength="120" required autocomplete="name">
                   </div>
                   <div class="field">
                     <label class="label" for="email">Email</label>
-                    <input id="email" name="email" type="email" class="input" placeholder="tu@email.com" required>
+                    <input id="email" name="email" type="email" class="input" placeholder="tu@email.com" required autocomplete="email">
                   </div>
                   <div class="field">
-                    <label class="label" for="telefono">Teléfono celular</label>
-                    <input id="telefono" name="telefono" type="tel" class="input" placeholder="+51 999 999 999" required>
+                    <label class="label" for="celular">Celular</label>
+                    <input id="celular" name="celular" type="tel" class="input" placeholder="Ej: 999 888 777 o +51 999 888 777" minlength="9" maxlength="20" required autocomplete="tel">
                   </div>
                   <div class="field">
-                    <label class="label" for="empresa">Empresa</label>
-                    <input id="empresa" name="empresa" class="input" placeholder="Tu empresa (opcional)">
+                    <label class="label" for="empresa">Empresa o negocio <span class="label-optional">(opcional)</span></label>
+                    <input id="empresa" name="empresa" class="input" placeholder="Nombre de tu empresa" maxlength="120" autocomplete="organization">
                   </div>
                   <div>
                     <button class="button button--ghost" data-prev type="button">Atrás</button>
@@ -1025,12 +1018,13 @@
 
                 <div class="step" data-step="3">
                   <div class="field">
-                    <label class="label" for="mensaje">Descripción</label>
-                    <textarea id="mensaje" name="mensaje" class="textarea" placeholder="Cuéntanos objetivos, plazos y funcionalidades clave" required></textarea>
+                    <label class="label" for="mensaje">Mensaje o descripción</label>
+                    <textarea id="mensaje" name="mensaje" class="textarea" placeholder="Cuéntanos brevemente qué necesitas, plazos o dudas…" minlength="10" maxlength="2000" required></textarea>
+                    <span class="field-hint">Mínimo 10 caracteres.</span>
                   </div>
                   <div>
                     <button class="button button--ghost" data-prev type="button">Atrás</button>
-                    <button class="button" type="submit">Enviar</button>
+                    <button class="button" type="submit" id="contactSubmitBtn">Enviar mensaje</button>
                   </div>
                 </div>
               </form>
@@ -1097,6 +1091,7 @@
           </div>
           <div class="footer__links">
             <strong>Servicios</strong>
+            <a href="productos.html">Productos</a>
             <a href="servicios.html">Apps móviles</a>
             <a href="servicios.html">Plataformas web</a>
             <a href="servicios.html">Ecommerce</a>
@@ -1104,10 +1099,11 @@
           </div>
           <div class="footer__links">
             <strong>Compañía</strong>
-            <a href="#portafolio">Portafolio</a>
-            <a href="#precios">Precios</a>
+            <a href="servicios.html#portafolio">Portafolio</a>
+            <a href="precios.html">Precios</a>
             <a href="nosotros.html">Nosotros</a>
-            <a href="#contacto">Contacto</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="#">Libro de reclamaciones</a>
           </div>
           <div class="footer__links">
             <strong>Contacto</strong>

@@ -14,6 +14,12 @@
 		}));
 	}
 
+	// Contact form: timestamp para anti-spam (mínimo tiempo en formulario)
+	const contactFormTs = document.getElementById('contactFormTs');
+	if (contactFormTs && !contactFormTs.value) {
+		contactFormTs.value = Math.floor(Date.now() / 1000);
+	}
+
 	// Contact form
 	const form = document.getElementById('contactForm');
 	const stepper = document.getElementById('stepper');

@@ -52,23 +52,54 @@
           <span class="brand__logo"><img class="brand__logo-img" src="assets/img/logo/logod.png" alt="Dangel Labs"></span>
         </a>
         <nav class="nav" aria-label="Principal">
-          <a href="servicios.html">Servicios</a>
-          <a href="index.html#portafolio">Portafolio</a>
-          <a href="index.html#precios">Precios</a>
+          <div class="nav__item">
+            <a href="servicios.html" class="nav__link">Servicios</a>
+            <div class="nav__dropdown" aria-hidden="true">
+              <div class="nav__dropdown-inner">
+                <a href="servicios.html#movil">Apps móviles</a>
+                <a href="servicios.html#web">Plataformas web</a>
+                <a href="servicios.html">Ecommerce</a>
+                <a href="servicios.html#consultoria">Consultoría</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav__item">
+            <a href="productos.html" class="nav__link">Productos</a>
+            <div class="nav__dropdown" aria-hidden="true">
+              <div class="nav__dropdown-inner">
+                <a href="productos.html#gestimype">GestiMype</a>
+                <a href="productos.html#pos">POS</a>
+                <a href="productos.html">Ver todos</a>
+              </div>
+            </div>
+          </div>
+          <a href="precios.html">Precios</a>
           <a href="nosotros.html" class="active">Nosotros</a>
-          <a href="index.html#contacto">Contacto</a>
+          <a href="contacto.html">Contacto</a>
         </nav>
-        <a class="button cta" href="index.html#contacto">Cotizar proyecto</a>
+        <a class="button" href="#">Zona clientes</a>
         <button class="burger" aria-label="Abrir menú" id="burger" type="button">☰</button>
       </div>
       <div class="container mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__group">
+          <span class="mobile-menu__label">Servicios</span>
+          <a href="servicios.html">Ver servicios</a>
+          <a href="servicios.html#movil">Apps móviles</a>
+          <a href="servicios.html#web">Plataformas web</a>
+          <a href="servicios.html">Ecommerce</a>
+          <a href="servicios.html#consultoria">Consultoría</a>
+        </div>
+        <div class="mobile-menu__group">
+          <span class="mobile-menu__label">Productos</span>
+          <a href="productos.html">Ver productos</a>
+          <a href="productos.html#gestimype">GestiMype</a>
+          <a href="productos.html#pos">POS</a>
+        </div>
         <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="index.html#portafolio">Portafolio</a>
-        <a href="index.html#precios">Precios</a>
+        <a href="precios.html">Precios</a>
         <a href="nosotros.html" class="active">Nosotros</a>
-        <a href="index.html#contacto">Contacto</a>
-        <a class="button" href="index.html#contacto">Cotizar proyecto</a>
+        <a href="contacto.html">Contacto</a>
+        <a class="button" href="#">Zona clientes</a>
       </div>
     </header>
 
@@ -343,10 +374,11 @@
           </div>
           <div class="footer__links">
             <strong>Compañía</strong>
-            <a href="index.html#portafolio">Portafolio</a>
-            <a href="index.html#precios">Precios</a>
+            <a href="servicios.html#portafolio">Portafolio</a>
+            <a href="precios.html">Precios</a>
             <a href="nosotros.html">Nosotros</a>
-            <a href="index.html#contacto">Contacto</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="#">Libro de reclamaciones</a>
           </div>
           <div class="footer__links">
             <strong>Contacto</strong>

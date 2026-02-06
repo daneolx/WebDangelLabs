@@ -56,23 +56,54 @@
           <span class="brand__logo"><img class="brand__logo-img" src="assets/img/logo/logod.png" alt="Dangel Labs"></span>
         </a>
         <nav class="nav" aria-label="Principal">
-          <a href="servicios.html" class="active">Servicios</a>
-          <a href="index.html#portafolio">Portafolio</a>
-          <a href="index.html#precios">Precios</a>
+          <div class="nav__item">
+            <a href="servicios.html" class="nav__link active">Servicios</a>
+            <div class="nav__dropdown" aria-hidden="true">
+              <div class="nav__dropdown-inner">
+                <a href="servicios.html#movil">Apps móviles</a>
+                <a href="servicios.html#web">Plataformas web</a>
+                <a href="servicios.html">Ecommerce</a>
+                <a href="servicios.html#consultoria">Consultoría</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav__item">
+            <a href="productos.html" class="nav__link">Productos</a>
+            <div class="nav__dropdown" aria-hidden="true">
+              <div class="nav__dropdown-inner">
+                <a href="productos.html#gestimype">GestiMype</a>
+                <a href="productos.html#pos">POS</a>
+                <a href="productos.html">Ver todos</a>
+              </div>
+            </div>
+          </div>
+          <a href="precios.html">Precios</a>
           <a href="nosotros.html">Nosotros</a>
-          <a href="index.html#contacto">Contacto</a>
+          <a href="contacto.html">Contacto</a>
         </nav>
-        <a class="button cta" href="index.html#contacto">Cotizar proyecto</a>
+        <a class="button" href="#">Zona clientes</a>
         <button class="burger" aria-label="Abrir menú" id="burger" type="button">☰</button>
       </div>
       <div class="container mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__group">
+          <span class="mobile-menu__label">Servicios</span>
+          <a href="servicios.html" class="active">Ver servicios</a>
+          <a href="servicios.html#movil">Apps móviles</a>
+          <a href="servicios.html#web">Plataformas web</a>
+          <a href="servicios.html">Ecommerce</a>
+          <a href="servicios.html#consultoria">Consultoría</a>
+        </div>
+        <div class="mobile-menu__group">
+          <span class="mobile-menu__label">Productos</span>
+          <a href="productos.html">Ver productos</a>
+          <a href="productos.html#gestimype">GestiMype</a>
+          <a href="productos.html#pos">POS</a>
+        </div>
         <a href="index.html">Inicio</a>
-        <a href="servicios.html" class="active">Servicios</a>
-        <a href="index.html#portafolio">Portafolio</a>
-        <a href="index.html#precios">Precios</a>
+        <a href="precios.html">Precios</a>
         <a href="nosotros.html">Nosotros</a>
-        <a href="index.html#contacto">Contacto</a>
-        <a class="button" href="index.html#contacto">Cotizar proyecto</a>
+        <a href="contacto.html">Contacto</a>
+        <a class="button" href="#">Zona clientes</a>
       </div>
     </header>
 
@@ -85,7 +116,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="movil">
         <div class="container">
           <div class="section__head">
             <div class="section__kicker">Desarrollo Móvil</div>
@@ -147,7 +178,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="web">
         <div class="container">
           <div class="section__head">
             <div class="section__kicker">Desarrollo Web</div>
@@ -212,7 +243,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="consultoria">
         <div class="container">
           <div class="section__head">
             <div class="section__kicker">Consultoría</div>
@@ -258,6 +289,77 @@
         </div>
       </section>
 
+      <!-- Portafolio — diseño dinámico con efectos -->
+      <section class="portfolio-servicios" id="portafolio">
+        <div class="portfolio-servicios__bg" aria-hidden="true">
+          <div class="portfolio-servicios__gradient"></div>
+          <div class="portfolio-servicios__glow"></div>
+        </div>
+        <div class="container">
+          <div class="portfolio-servicios__head">
+            <span class="portfolio-servicios__kicker">Portafolio</span>
+            <h2 class="portfolio-servicios__title">Proyectos realizados</h2>
+            <p class="portfolio-servicios__desc">Una muestra de nuestro trabajo en diferentes industrias y tecnologías.</p>
+          </div>
+          <div class="portfolio-servicios__grid">
+            <a href="https://notariavenero.com.pe" target="_blank" rel="noopener" class="portfolio-servicios__card portfolio-servicios__card--wide">
+              <div class="portfolio-servicios__thumb"><img src="assets/img/portafolio/1.jpg" alt="Notaría Venero"></div>
+              <div class="portfolio-servicios__overlay">
+                <h3>Notaría Venero</h3>
+                <p>Plataforma web para la Notaría Venero.</p>
+                <span class="portfolio-servicios__tech">Django • PostgreSQL</span>
+                <span class="portfolio-servicios__link">Ver proyecto →</span>
+              </div>
+            </a>
+            <a href="https://datacraft.pe" target="_blank" rel="noopener" class="portfolio-servicios__card">
+              <div class="portfolio-servicios__thumb"><img src="assets/img/portafolio/datacraft.png" alt="Datacraft.pe"></div>
+              <div class="portfolio-servicios__overlay">
+                <h3>Datacraft.pe</h3>
+                <p>Consultoría en analítica avanzada.</p>
+                <span class="portfolio-servicios__tech">Flutter • Go • AWS</span>
+                <span class="portfolio-servicios__link">Ver proyecto →</span>
+              </div>
+            </a>
+            <a href="https://digipasspro.com/" target="_blank" rel="noopener" class="portfolio-servicios__card">
+              <div class="portfolio-servicios__thumb"><img src="assets/img/portafolio/digipass.png" alt="Digipass"></div>
+              <div class="portfolio-servicios__overlay">
+                <h3>Digipass.com</h3>
+                <p>Ticketing y ventas automatizadas.</p>
+                <span class="portfolio-servicios__tech">React • NestJS • Docker</span>
+                <span class="portfolio-servicios__link">Ver proyecto →</span>
+              </div>
+            </a>
+            <a href="https://www.oyt-energy.com/" target="_blank" rel="noopener" class="portfolio-servicios__card">
+              <div class="portfolio-servicios__thumb"><img src="assets/img/portafolio/8.png" alt="O & T Energy"></div>
+              <div class="portfolio-servicios__overlay">
+                <h3>O & T Energy</h3>
+                <p>Servicios electromecánicos.</p>
+                <span class="portfolio-servicios__tech">HTML5 • CSS3 • JS</span>
+                <span class="portfolio-servicios__link">Ver proyecto →</span>
+              </div>
+            </a>
+            <a href="#" class="portfolio-servicios__card">
+              <div class="portfolio-servicios__thumb"><img src="assets/img/portafolio/4.jpg" alt="E-commerce"></div>
+              <div class="portfolio-servicios__overlay">
+                <h3>E-commerce</h3>
+                <p>Pollería El Galpon.</p>
+                <span class="portfolio-servicios__tech">HTML5 • CSS3 • JS</span>
+                <span class="portfolio-servicios__link">Ver proyecto →</span>
+              </div>
+            </a>
+            <a href="#" class="portfolio-servicios__card portfolio-servicios__card--wide">
+              <div class="portfolio-servicios__thumb"><img src="assets/img/portafolio/2.jpg" alt="Hotel El Mensajero Lodge"></div>
+              <div class="portfolio-servicios__overlay">
+                <h3>Hotel El Mensajero Lodge</h3>
+                <p>Lodge en la selva central del Perú.</p>
+                <span class="portfolio-servicios__tech">HTML5 • CSS3 • JS</span>
+                <span class="portfolio-servicios__link">Ver proyecto →</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="contacto">
         <div class="container">
           <div class="section__head">
@@ -273,28 +375,28 @@
                 <span class="dot"></span>
               </div>
               <form class="form" id="contactForm" action="contact.php" method="POST">
-                <!-- Config backend propio -->
-                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
                 <input type="hidden" name="_next" value="servicios.html#contacto" />
+                <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <input type="text" name="website" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+                <input type="hidden" name="_ts" id="contactFormTs" value="" />
+
                 <div class="step active" data-step="1">
                   <div class="field">
-                    <label class="label" for="tipo">Tipo de proyecto</label>
-                    <select id="tipo" name="tipo" class="select" required>
-                      <option value="">Selecciona…</option>
-                      <option>App móvil</option>
-                      <option>Aplicación Web</option>
-                      <option>Software a medida</option>
-                      <option>Consultoría</option>
-                    </select>
-                  </div>
-                  <div class="field">
-                    <label class="label" for="presupuesto">Presupuesto estimado</label>
-                    <select id="presupuesto" name="presupuesto" class="select" required>
-                      <option value="">Selecciona…</option>
-                      <option>$3k–$8k</option>
-                      <option>$8k–$20k</option>
-                      <option>$20k–$50k</option>
-                      <option>$50k+</option>
+                    <label class="label" for="interes">¿Qué te interesa?</label>
+                    <select id="interes" name="interes" class="select" required>
+                      <option value="">Selecciona una opción…</option>
+                      <optgroup label="Producto">
+                        <option value="Producto - GestiMype (demo o planes)">GestiMype — Demo o planes</option>
+                        <option value="Producto - Otro">Otro producto</option>
+                      </optgroup>
+                      <optgroup label="Servicios">
+                        <option value="Servicios - App móvil">App móvil</option>
+                        <option value="Servicios - Aplicación web">Aplicación web</option>
+                        <option value="Servicios - Software a medida">Software a medida</option>
+                        <option value="Servicios - Página o landing">Página web o landing</option>
+                      </optgroup>
+                      <option value="Consultoría">Consultoría</option>
+                      <option value="Otro">Otro / General</option>
                     </select>
                   </div>
                   <div>
@@ -304,16 +406,20 @@
 
                 <div class="step" data-step="2">
                   <div class="field">
-                    <label class="label" for="nombre">Nombre</label>
-                    <input id="nombre" name="nombre" class="input" placeholder="Tu nombre" required>
+                    <label class="label" for="nombre">Nombre completo</label>
+                    <input id="nombre" name="nombre" class="input" placeholder="Tu nombre" minlength="2" maxlength="120" required autocomplete="name">
                   </div>
                   <div class="field">
                     <label class="label" for="email">Email</label>
-                    <input id="email" name="email" type="email" class="input" placeholder="tu@email.com" required>
+                    <input id="email" name="email" type="email" class="input" placeholder="tu@email.com" required autocomplete="email">
                   </div>
                   <div class="field">
-                    <label class="label" for="empresa">Empresa</label>
-                    <input id="empresa" name="empresa" class="input" placeholder="Tu empresa (opcional)">
+                    <label class="label" for="celular">Celular</label>
+                    <input id="celular" name="celular" type="tel" class="input" placeholder="Ej: 999 888 777 o +51 999 888 777" minlength="9" maxlength="20" required autocomplete="tel">
+                  </div>
+                  <div class="field">
+                    <label class="label" for="empresa">Empresa o negocio <span class="label-optional">(opcional)</span></label>
+                    <input id="empresa" name="empresa" class="input" placeholder="Nombre de tu empresa" maxlength="120" autocomplete="organization">
                   </div>
                   <div>
                     <button class="button button--ghost" data-prev type="button">Atrás</button>
@@ -323,17 +429,18 @@
 
                 <div class="step" data-step="3">
                   <div class="field">
-                    <label class="label" for="mensaje">Descripción</label>
-                    <textarea id="mensaje" name="mensaje" class="textarea" placeholder="Cuéntanos objetivos, plazos y funcionalidades clave" required></textarea>
+                    <label class="label" for="mensaje">Mensaje o descripción</label>
+                    <textarea id="mensaje" name="mensaje" class="textarea" placeholder="Cuéntanos brevemente qué necesitas, plazos o dudas…" minlength="10" maxlength="2000" required></textarea>
+                    <span class="field-hint">Mínimo 10 caracteres.</span>
                   </div>
                   <div>
                     <button class="button button--ghost" data-prev type="button">Atrás</button>
-                    <button class="button" type="submit">Enviar</button>
+                    <button class="button" type="submit" id="contactSubmitBtn">Enviar mensaje</button>
                   </div>
                 </div>
               </form>
               <!-- Contact Alert -->
-              <div id="contactAlert" class="contact-alert" style="display: none;">
+              <div id="contactAlert" class="contact-alert contact-alert--inline" style="display: none;">
                 <div class="contact-alert__icon">
                   <svg class="success-icon" style="display: none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
@@ -402,10 +509,11 @@
           </div>
           <div class="footer__links">
             <strong>Compañía</strong>
-            <a href="index.html#portafolio">Portafolio</a>
-            <a href="index.html#precios">Precios</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="precios.html">Precios</a>
             <a href="nosotros.html">Nosotros</a>
-            <a href="index.html#contacto">Contacto</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="#">Libro de reclamaciones</a>
           </div>
           <div class="footer__links">
             <strong>Contacto</strong>
