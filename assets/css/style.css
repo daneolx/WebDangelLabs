@@ -2917,6 +2917,10 @@ header.site-header {
     display: none !important; 
     color: white !important;
   }
+  /* Zona clientes solo dentro del menú móvil, no al lado del logo */
+  .navbar .button {
+    display: none !important;
+  }
   header.site-header {
     padding: 0 20px;
   }
